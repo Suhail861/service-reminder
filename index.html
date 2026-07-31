@@ -58,7 +58,7 @@ Thank you for choosing Channu Automobile.`;
  }
  let next1=odo?Number(odo)+2000:null,next2=odo?Number(odo)+2500:null;
  return `Your bike ${bike} was serviced on ${dt}, ${tm} at ${fmt(odo)} km.
-Next service due: ${fmt(next1)}–${next2} km or within 3 months, whichever comes first.
+Next service due: ${fmt(next1)}–${fmt(next2)} km or within 3 months, whichever comes first.
 Thank you for choosing Channu Automobile.`;
 }
 function update(){document.getElementById('preview').textContent=message();document.getElementById('odo').disabled=document.getElementById('spd').checked;}
