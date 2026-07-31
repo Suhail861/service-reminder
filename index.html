@@ -52,22 +52,16 @@ function message(){
  const dt=document.getElementById('date').value;
  const tm=document.getElementById('time').value;
  if(spd){
- return `Thank you for choosing Channu Automobile.
-
+ return `
 Your bike ${bike} was serviced on ${dt} at ${tm}.
-
 As the speedometer reading was unavailable during service, we recommend your next service after 2,000–2,500 km or within 3 months, whichever comes first.
-
-Thank you for your trust.`;
+Thank you for choosing Channu Automobile.`;
  }
  let next1=odo?Number(odo)+2000:null,next2=odo?Number(odo)+2500:null;
- return `Thank you for choosing Channu Automobile.
-
+ return `
 Your bike ${bike} was serviced on ${dt} at ${tm} with an odometer reading of ${fmt(odo)} km.
-
 Next service: Between ${fmt(next1)} km and ${fmt(next2)} km or within 3 months, whichever comes first.
-
-Thank you for your trust.`;
+Thank you for choosing Channu Automobile.`;
 }
 function update(){document.getElementById('preview').textContent=message();document.getElementById('odo').disabled=document.getElementById('spd').checked;}
 function wa(){let p=document.getElementById('phone').value;if(p.length!=10){alert('Enter valid phone');return;}window.open(`https://wa.me/91${p}?text=`+encodeURIComponent(message()),'_blank');}
